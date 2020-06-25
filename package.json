@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/thiagoblima/apollo-client-consumer#readme",
   "devDependencies": {
-    "parcel-bundler": "^1.9.7"
+    "parcel-bundler": "^1.10.0"
   }
 }
