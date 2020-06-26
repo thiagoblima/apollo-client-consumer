@@ -30,3 +30,29 @@ client.query({
 
     document.getElementById('users').innerHTML = html
 })
+
+const getPosts = gql `
+    query {
+        posts {
+            title
+            author {
+                name
+            }
+        }
+    }
+`
+
+client.query({ query: getPosts }).then((res) => {
+    let html = ''
+
+    res.data.posts.forEach(() => {
+         html += `
+            <div>
+               <h3>${post.title}</h3>
+               <h4>${post.author.name}</h4>
+            </div>
+         `
+    })
+
+    document.getElementById('posts').innerHTML = html
+})
