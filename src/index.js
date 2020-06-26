@@ -18,5 +18,15 @@ const getUsers = gql `
 client.query({
     query: getUsers
 }).then((res) => {
-    console.log(res.data)
+    let html = ''
+    
+    res.data.users.forEach((user) => {
+        html += `
+           <div>
+               <h3> ${user.name} </h3>
+           </div>
+        `
+    })
+
+    document.getElementById('users').innerHTML = html
 })
