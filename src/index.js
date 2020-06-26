@@ -9,6 +9,8 @@ const getUsers = gql `
          users {
              id
              name
+             createdAt
+             updatedAt
          }
      }
 `
